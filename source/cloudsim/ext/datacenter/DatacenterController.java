@@ -103,6 +103,8 @@ public class DatacenterController extends DatacenterBroker implements GeoLocatab
 			this.loadBalancer = new ActiveVmLoadBalancer(this);
 		} else if (loadBalancePolicy.equals(Constants.LOAD_BALANCE_POLICY_RR)){
 			this.loadBalancer = new RoundRobinVmLoadBalancer(vmStatesList);
+		} else if (loadBalancePolicy.equals(Constants.LOAD_BALANCE_MEMETIC)){
+			this.loadBalancer = new MemeticLoadBalancer(this);
 		} else { //i.e. if (loadBalancePolicy.equals(Constants.LOAD_BALANCE_THROTTLED))
 			this.loadBalancer = new ThrottledVmLoadBalancer(this);
 		}

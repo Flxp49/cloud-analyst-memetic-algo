@@ -24,7 +24,6 @@ public class RoundRobinVmLoadBalancer extends VmLoadBalancer {
 	 */
 	public int getNextAvailableVm(){
 		currVm++;
-		
 		if (currVm >= vmStatesList.size()){
 			currVm = 0;
 		}

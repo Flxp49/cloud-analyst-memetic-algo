@@ -414,7 +414,5 @@ private static final String CMD_ABOUT = "About";
 			System.out.println("Some error occured in ui");
 			e.printStackTrace();
 		}
-		
-		
 	}	
 }
